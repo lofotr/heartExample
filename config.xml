@@ -1,0 +1,9 @@
+<config>
+   <modulesetting path="../modules/" />
+   <login type="admin">
+	<module name="TestModule" type="lat">
+		<option name="hello">Hello World</option>
+	</module>
+	<module name="test2"></module>
+   </login>
+</config>
