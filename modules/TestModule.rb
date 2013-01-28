@@ -1,7 +1,8 @@
 class TestModule < Module
 
  def run()
-   @service.options
+   options = @service.options
+   farge = options["farge"]
    puts "haha"
  end
 
