@@ -1,3 +1,4 @@
+require_relative 'lib/heart/parser/Parser.rb'
 require_relative 'lib/heart/treeTraverser.rb'
 require_relative 'lib/heart/metamodules/meta.rb'
 require_relative 'lib/heart/metamodules/moduleLoader.rb' 
@@ -18,10 +19,15 @@ require_relative 'lib/heart/metamodules/moduleLoader.rb'
   #tmp3 = Element.new("module")
   #tmp3.addAttribute("name", "test2")
   #top.addElement(tmp3)
-
+  file = File.new("config.xml", "r") 
+  parser = Parser.new(file)
+  parser.read()
+  tree = parser.result.last
   m = MetaModule.new
   m2 = ModuleLoader.new
-  trav = Traverser.new(top)
+  trav = Traverser.new(tree)
+
+  
   #trav.addModule(m)
   trav.addModule(m2)
   trav.run()
