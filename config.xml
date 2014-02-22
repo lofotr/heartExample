@@ -1,10 +1,19 @@
 <web>
-   <modulesetting path="./modules/" />
-   <option name="test" value="blablabla"/>
-   <login type="admin">
-	<option name="farge" value="#233223"/>
-	<module name="TestModule" type="lat">
-		<option name="hello">Hello World</option>
-	</module>
+	<modulesetting path="./modules/" />
+	<option name="test" value="blablabla"/>
+	<option name="person" value="Trond"/>
+	<option name="farge" value="rød"/>
+	
+	<login type="admin">
+		<option name="farge" value="blå"/>
+		<module name="TestModule" type="lat">
+			<option name="hello">Hello World</option>
+		</module>
+		<option name="person" value="Tanita"/>
    </login>
+   
+   <module name="TestModule" type="lat">
+   		<option name="person">Tony André Søreng</option>
+   </module>
+   <option name="person" value="trond3"/>
 </web>

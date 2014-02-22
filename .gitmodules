@@ -1,3 +1,4 @@
 [submodule "lib/heart"]
 	path = lib/heart
-	url = ssh://158.39.116.118:1337/home/git/heart/
+	url = git@github.com:lofotr/heart.git
+	branch = master
