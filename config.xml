@@ -13,7 +13,7 @@
    </login>
    
    <module name="TestModule" type="lat">
-   		<option name="person">Tony André Søreng</option>
+   		<option name="person">Tony</option>
    </module>
    <option name="person" value="trond3"/>
 </web>

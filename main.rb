@@ -2,7 +2,8 @@ require_relative 'lib/heart/parser/Parser.rb'
 require_relative 'lib/heart/treeTraverser.rb'
 require_relative 'lib/heart/metamodules/meta.rb'
 require_relative 'lib/heart/metamodules/moduleLoader.rb' 
-require_relative 'lib/heart/metamodules/optionLoader.rb' 
+require_relative 'lib/heart/metamodules/optionLoader.rb'
+require_relative 'lib/heart/service.rb' 
 
 
   file = File.new("config.xml", "r") 
@@ -11,8 +12,9 @@ require_relative 'lib/heart/metamodules/optionLoader.rb'
   tree = parser.result.last
   m = MetaModule.new
   
-  moduleLoader = ModuleLoader.new
-  optionLoader = OptionLoader.new
+  service = Service.new
+  moduleLoader = ModuleLoader.new(service)
+  optionLoader = OptionLoader.new(service)
   trav = Traverser.new(tree)
 
   
@@ -20,8 +22,4 @@ require_relative 'lib/heart/metamodules/optionLoader.rb'
   trav.addModule(moduleLoader)
   trav.addModule(optionLoader)
   trav.run()
-
-
-  service = Service.instance
-  service.options
 
