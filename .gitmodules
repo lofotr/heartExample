@@ -1,4 +1,4 @@
 [submodule "lib/heart"]
 	path = lib/heart
-	url = git@github.com:lofotr/heart.git
+	url  = https://github.com/lofotr/heart.git
 	branch = master
